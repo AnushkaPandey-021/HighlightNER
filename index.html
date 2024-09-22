@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HighlightNER</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for visualizations -->
+</head>
+<body>
+    <div id="chat-container">
+        <h1>HighlightNER</h1>
+        <input id="chat-input" type="text" placeholder="Enter text...">
+        <button id="send-btn">Generate</button>
+        
+        <select id="entity-filter">
+            <option value="all">All</option>
+            <option value="ORG">Organizations</option>
+            <option value="GPE">Geopolitical Entities</option>
+            <option value="LOC">Locations</option>
+            <option value="PERSON">Persons</option>
+            <option value="DATE">Dates</option>
+            <option value="MONEY">Amounts of Money</option>
+            <option value="PERCENT">Percentages</option>
+            <option value="MISC">Miscellaneous</option>
+            <option value="PRODUCT">Products</option>
+            <option value="EVENT">Events</option>
+            <option value="WORK_OF_ART">Works of Art</option>
+            <option value="LAW">Laws</option>
+            <option value="LANGUAGE">Languages</option>
+            <option value="NORP">Nationalities or Religious or Political Groups</option>
+        </select>
+        
+        <div id="chat-output"></div>
+        <canvas id="entity-chart" width="5" height="5"></canvas>
+        <button id="download-btn" style="display:none;">Download Results</button> <!-- Initially hidden -->
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

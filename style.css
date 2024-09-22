@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono:wght@400&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background-color: #f4f4f9;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#chat-container {
+    width: 50%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#chat-input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s;
+}
+
+#chat-input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+#send-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#send-btn:hover {
+    background-color: #45a049;
+}
+
+#chat-output {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: calc(100% - 22px);
+    background-color: #fafafa;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 150px;
+    overflow-y: auto;
+}
+
+.entity {
+    font-weight: bold;
+    padding: 5px 8px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.entity-label {
+    font-size: 0.8em;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#entity-chart {
+    width: 280px;  /* Set width to 250px */
+    height: 280px; /* Set height to 250px */
+    margin: 0 auto; /* Center the chart */
+}
+
+/* Individual entity colors */
+.entity.ORG { background-color: #FFC0CB; }
+.entity.GPE { background-color: #ADD8E6; }
+.entity.LOC { background-color: #90EE90; }
+.entity.PERSON { background-color: #FFD700; }
+.entity.DATE { background-color: #FFFACD; }
+.entity.MONEY { background-color: #90EE90; }
+.entity.PERCENT { background-color: #E0FFFF; }
+.entity.MISC { background-color: #F0E68C; }
+.entity.PRODUCT { background-color: #DDA0DD; }
+.entity.EVENT { background-color: #FFDEAD; }
+.entity.WORK_OF_ART { background-color: #B0E0E6; }
+.entity.LAW { background-color: #FFE4E1; }
+.entity.LANGUAGE { background-color: #F5F5DC; }
+.entity.NORP { background-color: #FFA07A; }
